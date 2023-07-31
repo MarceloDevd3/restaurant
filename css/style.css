@@ -1,0 +1,226 @@
+/*Reset css*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+@keyframes faded {
+    from {
+     opacity: 0%;
+    }
+    to{
+     opacity: 100%;
+    }
+}
+
+body{
+    overflow: hidden;
+    animation: faded backwards 0.7s ;
+}
+
+/*tabela de cores*/
+
+:root {
+  --radial-index-00 : hsl(0, 0%, 15%);
+  --radial-index-01 : hsl(0, 0%, 14%);
+  --radial-index-02: hsl(0, 0%, 14%);
+  --radial-index-03: hsl(0, 0%, 16%);
+  --radial-index-04:hsl(0, 0%, 18%);
+  --yellow: hsl(39, 81%, 51%);
+}
+
+/*dont repeat yourself*/
+
+.up {
+    text-transform: uppercase;
+    
+}
+
+
+
+
+/*nav*/
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 10;
+    position: relative;
+}
+
+.logo li a {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    font-weight:700;
+    letter-spacing: -2px;
+    color: var(--yellow);
+    margin-left: 35px;
+}
+
+.nav-bar ul > li a {
+    position: relative;
+    left: -45px;
+    z-index: 7;
+    margin: 0 15px 0 15px;
+    color: gray;
+    font-size: small;
+}
+
+i{
+    color: gray;
+    margin-right: 20px;
+}
+
+
+header {
+    background-color: #171717;
+    width: 100%;
+    height: 100vh;
+}
+
+.radial {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    -webkit-clip-path: circle(47.3% at 50% 50%);
+    clip-path: circle(47.3% at 50% 50%);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--radial-index-01);
+    z-index: 1;
+}
+
+.radial-0 {
+position: absolute;
+left: 50px;
+-webkit-clip-path: circle(42.0% at 50% 50%);
+clip-path: circle(42.0% at 50% 50%);
+background-color: var(--radial-index-02);
+width:95%;
+height: 100vh;
+z-index: 2;
+animation: faded backwards 1.5s ;
+}
+
+.radial-1 {
+    position: absolute;
+    left: 25px;
+    -webkit-clip-path: circle(42.0% at 50% 50%);
+    clip-path: circle(42.0% at 50% 50%);
+    background-color: var(--radial-index-03);
+    width:95%;
+    height: 100vh;
+    z-index: 3;
+    animation: faded backwards 1.5s ;
+}
+
+.radial-2 {
+    position: absolute;
+    left: 135px;
+    -webkit-clip-path: circle(42.0% at 50% 50%);
+    clip-path: circle(42.0% at 50% 50%);
+    background-color: var(--radial-index-04);
+    width:75%;
+    height: 100vh;
+    z-index: 5;
+    animation: faded backwards 1.5s ;
+}
+
+
+@keyframes rotateEndMoves {
+
+    0%{
+        position: relative;
+        right: -1000px; 
+        transform: rotate(-180deg);
+    }
+
+    100%{
+        position: relative;
+        right: -540px; 
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.dish img {
+    position: relative;
+    top: -20px;
+    right: -540px;
+    z-index: 1000;
+    width: 50%;
+}
+
+.dish img {
+    position: relative;
+    animation:rotateEndMoves  ease-in-out 1s;
+}
+
+@keyframes left {
+    from {
+     position: absolute;
+     left: -5%;
+    }
+    to{
+     position: absolute;
+     left: 5%;
+    }
+}
+
+.informacao {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    color: #fff;
+    z-index: 100;
+    animation: left ease-in-out 1s;
+}
+
+
+.informacao h1{
+    position: relative;
+    z-index: 100;
+    font-size: 5.4rem;
+    margin-bottom: 25px;
+    line-height: 75px;
+}
+
+.informacao p {
+    margin: 15px 0 15px 0;
+}
+
+button {
+    border: 1px solid #fff;
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    background-color: transparent;
+    opacity: 0.7;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: antiquewhite;
+    color: #171717;
+}
